@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Cards with jQuery</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="filter-cards.css">
+
+  <!-- jQuery file & our custom JS file-->
+
+
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header>
+      <h1>Browse Creative Projects</h1>
+      <p>Use the category buttons to filter this collection of creative media work.</p>
+    </header>
+
+    <!-- Filter buttons -->
+    <!-- These buttons control which cards are shown -->
+    <section class="filters">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Web</button>
+      <button class="filter-btn">Design</button>
+      <button class="filter-btn">Photo</button>
+      <button class="filter-btn">Video</button>
+    </section>
+
+    <!-- Card grid -->
+    <!-- Each card belongs to one category using a class like web, design, photo, or video -->
+    <section class="card-grid">
+
+      <article class="card">
+        <img src="images/stock10.png" alt="Band Website Redesign project">
+        <div class="card-text">
+          <p class="category-label">Web</p>
+          <h2>Band Website Redesign</h2>
+          <p>A homepage redesign created for a fictional music group with bold visuals and clear navigation.</p>
+        </div>
+      </article>
+
+      <article class="card web">
+        <img src="images/stock09.png" alt="Bakery Page project">
+        <div class="card-text">
+          <p class="category-label">Web</p>
+          <h2>Bakery Landing Page</h2>
+          <p>A clean and welcoming landing page concept for a neighborhood bakery.</p>
+        </div>
+      </article>
+
+      <article class="card design">
+        <img src="images/stock08.png" alt="Event Poster project">
+        <div class="card-text">
+          <p class="category-label">Design</p>
+          <h2>Event Poster</h2>
+          <p>A set of promotional posters designed for a campus art festival.</p>
+        </div>
+      </article>
+
+      <article class="card design">
+        <img src="images/stock06.png" alt="Logo and Brand Kit project">
+        <div class="card-text">
+          <p class="category-label">Design</p>
+          <h2>Logo and Brand Kit</h2>
+          <p>A visual identity package featuring a logo, colors, and typography choices.</p>
+        </div>
+      </article>
+
+      <article class="card photo">
+        <img src="images/stock05.png" alt="Environmental Portraits project">
+        <div class="card-text">
+          <p class="category-label">Photo</p>
+          <h2>Environmental Portraits</h2>
+          <p>A photography series capturing subjects in locations that help tell their story.</p>
+        </div>
+      </article>
+
+      <article class="card photo">
+        <img src="images/stock04.png" alt="Street Photography project">
+        <div class="card-text">
+          <p class="category-label">Photo</p>
+          <h2>Street Photography</h2>
+          <p>A collection of candid urban photos focused on color, light, and timing.</p>
+        </div>
+      </article>
+
+      <article class="card video">
+        <img src="images/stock03.png" alt="Documentary Promo project">
+        <div class="card-text">
+          <p class="category-label">Video</p>
+          <h2>Documentary Promo</h2>
+          <p>A promotional still and summary for a short nonfiction video project.</p>
+        </div>
+      </article>
+
+      <article class="card video">
+        <img src="images/stock02.png" alt="Social Media Video project">
+        <div class="card-text">
+          <p class="category-label">Video</p>
+          <h2>Social Media Video</h2>
+          <p>A short-form video ad designed for a scrolling social media audience.</p>
+        </div>
+      </article>
+
+    </section>
+
+
+
+    <!-- Explanation section -->
+    <hr class="line">
+    <section class="code-explanation">
+      <h2 class="section-heading">How This HTML Works</h2>
+
+      <p>
+        This page is built as a filterable project gallery. The buttons at the top let the user choose which type of work to display.
+      </p>
+
+      <h3>How the page is organized</h3>
+      <ol>
+        <li>The <code>&lt;head&gt;</code> contains setup information, CSS links, and JavaScript links.</li>
+        <li>The <code>&lt;body&gt;</code> contains the visible content of the page.</li>
+        <li>The filter button section contains clickable buttons.</li>
+        <li>The card grid section contains all of the project cards.</li>
+      </ol>
+
+      <h3>How the card layout works</h3>
+      <p>
+        The cards are placed inside a CSS Grid container. The grid uses
+        <code>repeat(auto-fit, minmax(240px, 1fr))</code>, which allows the browser
+        to automatically decide how many columns can fit while keeping each card at
+        least 240 pixels wide.
+      </p>
+
+      <h3>How the interactive part works</h3>
+      <p>
+        Each button has a <code>data-filter</code> attribute that stores a category name like
+        <code>web</code>, <code>design</code>, <code>photo</code>, or <code>video</code>.
+      </p>
+
+      <p>
+        Each project card has the class <code>card</code> plus a category class like
+        <code>web</code> or <code>photo</code>.
+      </p>
+
+      <p>
+        When a button is clicked, JavaScript reads the button’s <code>data-filter</code> value
+        and then shows only the cards that match that category.
+      </p>
+
+      <h3>Why use classes on the cards?</h3>
+      <p>
+        Classes can be reused on multiple elements. Since more than one card can belong to the same
+        category, classes make filtering easier.
+      </p>
+
+      <h3>Why use data-filter on the buttons?</h3>
+      <p>
+        The <code>data-filter</code> attribute stores extra information directly in the HTML.
+        JavaScript can read that information when the user clicks a button.
+      </p>
+
+      <h2 class="section-heading">Glossary of HTML Terms</h2>
+      <dl>
+        <dt><code>&lt;button&gt;</code></dt>
+        <dd>A clickable button element.</dd>
+
+        <dt><code>&lt;article&gt;</code></dt>
+        <dd>A self-contained piece of content, such as one project card.</dd>
+
+        <dt><code>class</code></dt>
+        <dd>Used for styling or scripting multiple elements.</dd>
+
+        <dt><code>data-filter</code></dt>
+        <dd>A custom data attribute that stores the category a button should filter.</dd>
+
+        <dt><code>section</code></dt>
+        <dd>Groups related content together.</dd>
+
+        <dt><code>img</code></dt>
+        <dd>Displays an image.</dd>
+      </dl>
+
+      <h2 class="section-heading">Important Elements and Classes</h2>
+      <ul>
+        <li><code>wrapper</code> - Main layout container for the page</li>
+        <li><code>&lt;header&gt;</code> - Contains the page heading and intro text</li>
+        <li><code>filters</code> - Wraps the filter buttons</li>
+        <li><code>filter-btn</code> - Applied to every filter button</li>
+        <li><code>active</code> - Marks the currently selected filter button</li>
+        <li><code>card-grid</code> - Grid container that holds all of the project cards</li>
+        <li><code>card</code> - Applied to every project card</li>
+        <li><code>web</code>, <code>design</code>, <code>photo</code>, <code>video</code> - Category classes used for filtering</li>
+        <li><code>card-text</code> - Wraps the text content inside each card</li>
+        <li><code>category-label</code> - Styles the category label inside each card</li>
+      </ul>
+    </section>
+
+
+</body>
+</html>
