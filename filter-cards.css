@@ -13,10 +13,10 @@
 
 /* Style the filter buttons. */
 .filter-btn {
-  padding: 0.7rem 1.2rem;
-  border: none;
+  padding: 0.75rem 1.3rem;
+  border: 2px solid #1f2937;
   border-radius: 2rem;
-  background-color: #e2e8f0;
+  background-color: #ffffff;
   color: black;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
@@ -25,13 +25,14 @@
 /* Change the button appearance on hover. */
 .filter-btn:hover {
   background-color: #cbd5e0;
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 /* Style the currently selected button.
    This class is added and removed with jQuery. */
 .filter-btn.active {
-  
+  background-color: #000a5f;
+  color: rgb(204, 227, 251);
 }
 
 
@@ -48,7 +49,7 @@
    can fit in each row without needing media queries. */
 .card-grid {
   display: grid;
-  grid-template-columns: ;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   background-color: white;
   padding: 1rem;
@@ -81,9 +82,9 @@
 .category-label {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #805ad5;
+  color: #0a016c;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -116,9 +117,10 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #cfcfcf;
-  color: #1a202c;
+  color: #000000;
   line-height: 1.6;
   padding: 1rem;
+  font-size: 1.2em;
 }
 
 /* Make images behave more predictably.

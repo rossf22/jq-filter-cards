@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="filter-cards.css">
 
   <!-- jQuery file & our custom JS file-->
-
+<script src="jquery-3.7.1.js"></script>
+<script src="filter-cards.js"></script>
 
 </head>
 <body>
@@ -16,25 +17,26 @@
   <div class="wrapper">
 
     <header>
-      <h1>Browse Creative Projects</h1>
-      <p>Use the category buttons to filter this collection of creative media work.</p>
+      <h1>Ross Farhi Portfolio</h1>
+      <p>A collection of graphic design projects from Ross Farhi, the lead graphic design intern for UC Athletics.</p>
     </header>
 
     <!-- Filter buttons -->
     <!-- These buttons control which cards are shown -->
     <section class="filters">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">Web</button>
-      <button class="filter-btn">Design</button>
-      <button class="filter-btn">Photo</button>
-      <button class="filter-btn">Video</button>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="photo">Photo</button>
+      <button class="filter-btn" data-filter="video">Video</button>
+      <button class="filter-btn" data-filter="baseball">Baseball</button>
     </section>
 
     <!-- Card grid -->
     <!-- Each card belongs to one category using a class like web, design, photo, or video -->
     <section class="card-grid">
 
-      <article class="card">
+      <article class="card web">
         <img src="images/stock10.png" alt="Band Website Redesign project">
         <div class="card-text">
           <p class="category-label">Web</p>
@@ -105,6 +107,28 @@
           <p>A short-form video ad designed for a scrolling social media audience.</p>
         </div>
       </article>
+
+      <article class="card baseball">
+        <img src="images/4x5.jpg" alt="Baseball gameday graphic 1">
+        <div class="card-text">
+        <p class="category-label">Baseball</p>
+        <h2>Baseball Gameday Graphic Pt. 1</h2>
+        <p>A gameday graphic featuring our first of two matchups versus Xavier University.</p>
+        </div>
+      </article>
+
+      <article class="card baseball">
+      <img src="images/BASE-Gameday2.jpg" alt="Baseball gameday graphic 2">
+      <div class="card-text">
+      <p class="category-label">Baseball</p>
+      <h2>Baseball Gameday Graphic Pt. 2</h2>
+      <p>A gameday graphic featuring our second of two matchups versus Xavier University</p>
+      </div>
+      </article>
+
+
+
+
 
     </section>
 
